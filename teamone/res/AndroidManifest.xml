@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright 2015, CyanogenMod Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:androidprv="http://schemas.android.com/apk/prv/res/android"
+    package="teamone.platform"
+    coreApp="true" android:sharedUserId="android.uid.system"
+    android:sharedUserLabel="@string/teamone_system_label">
+
+    <protected-broadcast android:name="teamone.intent.action.SCREEN_CAMERA_GESTURE" />
+    <protected-broadcast android:name="teamone.intent.action.INITIALIZE_LINEAGE_HARDWARE" />
+    <protected-broadcast android:name="teamone.intent.action.ACTION_AUDIO_SESSIONS_CHANGED" />
+    <protected-broadcast android:name="teamone.platform.intent.action.PROFILE_SELECTED" />
+
+    <protected-broadcast android:name="teamone.intent.action.UPDATE_PREFERENCE" />
+    <protected-broadcast android:name="teamone.intent.action.REFRESH_PREFERENCE" />
+
+    <protected-broadcast android:name="teamone.platform.intent.action.PROFILE_UPDATED" />
+    <protected-broadcast android:name="teamone.platform.intent.action.INTENT_ACTION_PROFILE_TRIGGER_STATE_CHANGED" />
+
+    <protected-broadcast android:name="teamone.platform.intent.action.UPDATE_TWILIGHT_STATE" />
+
+    <!-- Allows an application access to the Lineage hardware abstraction framework
+        <p>Not for use by third-party applications. -->
+    <permission android:name="teamone.permission.HARDWARE_ABSTRACTION_ACCESS"
+                android:label="@string/permlab_useHardwareFramework"
+                android:description="@string/permdesc_useHardwareFramework"
+                android:protectionLevel="signature|privileged" />
+
+    <!-- Allows an application to write to Lineage system settings -->
+    <permission android:name="teamone.permission.WRITE_SETTINGS"
+                android:label="@string/permlab_writeSettings"
+                android:description="@string/permdesc_writeSettings"
+                android:protectionLevel="normal" />
+
+    <!-- Allows an application to modify system profiles -->
+    <permission android:name="teamone.permission.MODIFY_PROFILES"
+                android:label="@string/permlab_modifyProfiles"
+                android:description="@string/permdesc_modifyProfiles"
+                android:protectionLevel="normal" />
+
+    <!-- Allows an application to write to secure Lineage system settings.
+        <p>Not for use by third-party applications. -->
+    <permission android:name="teamone.permission.WRITE_SECURE_SETTINGS"
+                android:label="@string/permlab_writeSecureSettings"
+                android:description="@string/permdesc_writeSecureSettings"
+                android:protectionLevel="signature|privileged|development" />
+
+    <!-- Permission for adding/removing applications to protected apps
+          <p>Not for use by third-party applications. -->
+    <permission
+                android:name="teamone.permission.PROTECTED_APP"
+                android:label="@string/permlab_protectedApp"
+                android:description="@string/permdesc_protectedApp"
+                android:protectionLevel="signature|privileged" />
+
+    <!-- Allows low-level access to performance management.
+         <p>Not for use by third-party applications. -->
+    <permission android:name="teamone.permission.PERFORMANCE_ACCESS"
+                android:label="@string/permlab_perfAccess"
+                android:description="@string/permdesc_perfAccessDesc"
+                android:protectionLevel="signature|privileged" />
+
+    <!-- Allows an application to read the weather content from the provider-->
+    <permission android:name="teamone.permission.READ_WEATHER"
+                android:label="@string/permlab_weather_read"
+                android:description="@string/permdesc_weather_read"
+                android:protectionLevel="normal"/>
+
+    <!-- Allows an application to update the content of the weather provider
+        <p>Not for use by third-party applications. -->
+    <permission android:name="teamone.permission.WRITE_WEATHER"
+                android:label="@string/permlab_weather_write"
+                android:description="@string/permdesc_weather_write"
+                android:protectionLevel="signature|privileged" />
+
+    <!-- Allows an application to be identified as a weather provider service -->
+    <permission android:name="teamone.permission.BIND_WEATHER_PROVIDER_SERVICE"
+                android:label="@string/permlab_weather_bind"
+                android:description="@string/permdesc_weather_bind"
+                android:protectionLevel="signature"/>
+
+    <!-- Allows an application to observe system-wide changes to audio sessions
+         @hide -->
+    <permission android:name="teamone.permission.OBSERVE_AUDIO_SESSIONS"
+                android:label="@string/permlab_observe_audio_sessions"
+                android:description="@string/permdesc_observe_audio_sessions"
+                android:protectionLevel="normal"/>
+
+    <!-- Allows an application to access the weather service.
+        <p>Although the protection is normal, this permission should be required ONLY by those apps
+        meant to do something meaningful with the data provided by the service (LockClock, SysUI)-->
+    <permission android:name="teamone.permission.ACCESS_WEATHER_MANAGER"
+                android:label="@string/permlab_weather_access_mgr"
+                android:description="@string/permdesc_weather_access_mgr"
+                android:protectionLevel="normal"/>
+
+    <!-- Allows an application to manage LiveDisplay -->
+    <permission android:name="teamone.permission.MANAGE_LIVEDISPLAY"
+                android:label="@string/permlab_manageLiveDisplay"
+                android:description="@string/permdesc_manageLiveDisplay"
+                android:icon="@drawable/ic_launcher_teamone"
+                android:protectionLevel="normal" />
+
+    <!-- Allows an application to change system style -->
+    <permission android:name="teamone.permission.CHANGE_STYLE"
+                android:label="@string/permlab_changeStyle"
+                android:description="@string/permdesc_changeStyle"
+                android:icon="@drawable/ic_launcher_teamone"
+                android:protectionLevel="dangerous" />
+
+    <application android:process="system"
+                 android:persistent="true"
+                 android:hasCode="false"
+                 android:label="@string/teamone_system_label"
+                 android:allowClearUserData="false"
+                 android:killAfterRestore="false"
+                 android:supportsRtl="true"/>
+
+    <!-- Permission for reading the DataUsage database -->
+    <permission android:name="teamone.permission.READ_DATAUSAGE"
+                android:label="@string/permlab_dataUsageRead"
+                android:description="@string/permdesc_dataUsageRead"
+                android:protectionLevel="signature|privileged" />
+
+    <!-- Permission for writing the DataUsage database -->
+    <permission android:name="teamone.permission.WRITE_DATAUSAGE"
+                android:label="@string/permlab_dataUsageWrite"
+                android:description="@string/permdesc_dataUsageWrite"
+                android:protectionLevel="signature|privileged" />
+
+    <!-- Permission for managing remote preferences -->
+    <permission android:name="teamone.permission.MANAGE_REMOTE_PREFERENCES"
+                android:label="@string/permlab_manageRemotePrefs"
+                android:description="@string/permdesc_manageRemotePrefs"
+                android:protectionLevel="signature|privileged" />
+
+</manifest>

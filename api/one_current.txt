@@ -1,0 +1,56 @@
+package one.app {
+
+  public final class Profile implements java.lang.Comparable android.os.Parcelable {
+    ctor public Profile(java.lang.String);
+    method public boolean isNightModeEnabled();
+   }
+
+  package one.platform {
+
+  public final class Manifest {
+    ctor public Manifest();
+  }
+
+  public static final class Manifest.permission {
+    ctor public Manifest.permission();
+    field public static final java.lang.String CHANGE_STYLE = "one.permission.CHANGE_STYLE";
+   }
+
+   public static final class R.anim {
+    ctor public R.anim();
+  }
+  
+  public static final class R.dimen {
+    ctor public R.dimen();
+  }
+
+  public static final class LineageSettings.System extends android.provider.Settings.NameValueTable {
+    ctor public LineageSettings.System();
+    field public static final java.lang.String BERRY_CURRENT_ACCENT = "berry_current_accent";
+    field public static final java.lang.String BERRY_GLOBAL_STYLE = "berry_global_style";
+
+  package one.style {
+
+  public class StyleInterface {
+    method public static one.style.StyleInterface getInstance(android.content.Context);
+    method public one.style.Suggestion getSuggestion(android.graphics.Bitmap, int[]);
+    method public boolean setAccent(java.lang.String);
+	  method public boolean setGlobalStyle(int);
+    field public static final java.lang.String ACCENT_DEFAULT = "one";
+    field public static final java.lang.String CHANGE_STYLE_SETTINGS_PERMISSION = "one.permission.CHANGE_STY$
+    field public static final int STYLE_GLOBAL_AUTO_DAYTIME = 1; // 0x1
+    field public static final int STYLE_GLOBAL_AUTO_WALLPAPER = 0; // 0x0
+    field public static final int STYLE_GLOBAL_DARK = 3; // 0x3
+    field public static final int STYLE_GLOBAL_LIGHT = 2; // 0x2
+  }
+
+  public class Suggestion implements android.os.Parcelable {
+    ctor public Suggestion(int, int);
+    method public int describeContents();
+    method public void writeToParcel(android.os.Parcel, int);
+    field public final int globalStyle;
+    field public final int selectedAccent;
+  }
+
+}
+
