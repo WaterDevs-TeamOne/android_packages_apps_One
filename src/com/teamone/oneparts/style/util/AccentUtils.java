@@ -30,13 +30,15 @@ import com.teamone.oneparts.R;
 import com.teamone.oneparts.style.models.Accent;
 import com.teamone.oneparts.style.models.StyleStatus;
 
+import oneos.style.StyleInterface;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public final class AccentUtils {
     private static final String TAG = "AccentUtils";
-    private static final String METADATA_COLOR = "lineage_berry_accent_preview";
-    private static final String METADATA_SUPPORTED_STYLES = "lineage_berry_accent_supported_styles";
+    private static final String METADATA_COLOR = "one_berry_accent_preview";
+    private static final String METADATA_SUPPORTED_STYLES = "one_berry_accent_supported_styles";
     private static final String METADATA_STYLE_DEFAULT = "dark|light";
     private static final String METADATA_STYLE_DARK = "dark";
     private static final String METADATA_STYLE_LIGHT = "light";
@@ -93,7 +95,7 @@ public final class AccentUtils {
     @NonNull
     private static Accent getDefaultAccent(Context context) {
         return new Accent(context.getString(R.string.style_accent_default_name),
-                "", Color.parseColor("#167C80"), StyleStatus.DYNAMIC);
+                StyleInterface.ACCENT_DEFAULT, Color.parseColor("#167C80"), StyleStatus.DYNAMIC);
     }
 
     public static boolean isCompatible(StyleStatus currentStatus, Accent accent) {

@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="lineageparts_title">LineageOS Settings</string>
+    <string name="oneparts_title">OneOS Settings</string>
 
     <!-- Generic stuff used everywhere -->
     <string name="loading">Loading\u2026</string>
@@ -45,7 +45,7 @@
 
     <!-- Privacy Settings Header item -->
     <string name="privacy_settings_title">Privacy</string>
-    <string name="privacy_settings_category" translatable="false">LineageOS</string>
+    <string name="privacy_settings_category" translatable="false">OneOS</string>
 
     <!-- Privacy Guard -->
     <string name="privacy_guard_switch_label">Enable Privacy Guard</string>
@@ -537,13 +537,13 @@
                  <b>Total commits:</b> <xliff:g id="total_commits">%2$s</xliff:g><br/><br/>
                  <b>Last update:</b> <xliff:g id="date">%3$s</xliff:g>]]></string>
 
-    <!-- Anonymous Statistics #Lineage -->
+    <!-- Anonymous Statistics #One -->
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_title">LineageOS statistics</string>
-    <string name="anonymous_statistics_summary">Help make LineageOS better by opting into anonymous statistics reporting</string>
+    <string name="anonymous_statistics_title">OneOS statistics</string>
+    <string name="anonymous_statistics_summary">Help make OneOS better by opting into anonymous statistics reporting</string>
     <string name="anonymous_statistics_warning_title">About</string>
-    <string name="anonymous_statistics_warning">Opting into LineageOS Statistics will allow non-personal data to be submitted to the
-        developers of LineageOS to track unique installations across devices. The information submitted includes an unique identifier,
+    <string name="anonymous_statistics_warning">Opting into OneOS Statistics will allow non-personal data to be submitted to the
+        developers of OneOS to track unique installations across devices. The information submitted includes an unique identifier,
         which does not compromise your privacy or personal data. The data is submitted during each boot.\n\nFor an example of the data that is submitted, tap on Preview Data.</string>
     <string name="enable_reporting_title">Enable reporting</string>
     <string name="preview_data_title">Preview data</string>
@@ -579,7 +579,7 @@
     <string name="weather_settings_button">Provider settings</string>
     <string name="weather_settings_activity_not_found">Unable to launch the settings menu of this provider</string>
     <string name="weather_settings_add_weather_provider">Add weather provider</string>
-    <string name="weather_settings_play_store_market_url" translatable="false">market://search?q=lineageosweatherprovider&amp;c=apps</string>
+    <string name="weather_settings_play_store_market_url" translatable="false">market://search?q=OneOSweatherprovider&amp;c=apps</string>
     <string name="weather_settings_play_store_http_url" translatable="false">http://play.google.com/store/search?q=lineageosweatherprovider&amp;c=apps</string>
     <string name="weather_settings_general_settings_title">General</string>
     <string name="weather_settings_providers_title">Providers</string>
@@ -671,7 +671,7 @@
     <string name="touchscreen_gesture_action_volume_up">Raise media volume</string>
 
     <!-- Egg: Title for the easter egg activity -->
-    <string name="egg_title" translatable="false">LineageOS Easter Egg</string>
+    <string name="egg_title" translatable="false">OneOS Easter Egg</string>
 
     <!-- Berry Lite -->
     <string name="style_title">Style</string>

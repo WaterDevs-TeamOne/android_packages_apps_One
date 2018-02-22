@@ -36,15 +36,16 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.READ_SEARCH_INDEXABLES" />
 
-    <uses-permission android:name="lineageos.permission.MANAGE_REMOTE_PREFERENCES" />
+    <uses-permission android:name="oneos.permission.MANAGE_REMOTE_PREFERENCES" />
+    <uses-permission android:name="oneos.permission.CHANGE_STYLE" />
 
-    <protected-broadcast android:name="lineageos.intent.action.UPDATE_POWER_MENU" />
-    <protected-broadcast android:name="lineageos.platform.app.profiles.PROFILES_STATE_CHANGED" />
+    <protected-broadcast android:name="oneos.intent.action.UPDATE_POWER_MENU" />
+    <protected-broadcast android:name="oneos.platform.app.profiles.PROFILES_STATE_CHANGED" />
     <protected-broadcast android:name="com.teamone.oneparts.PART_CHANGED" />
     <protected-broadcast android:name="com.teamone.oneparts.REFRESH_PART" />
     <protected-broadcast android:name="com.teamone.oneparts.gestures.UPDATE_SETTINGS" />
 
-    <application android:label="@string/lineageparts_title"
+    <application android:label="@string/oneparts_title"
             android:theme="@style/Theme.Settings"
             android:hardwareAccelerated="true"
             android:supportsRtl="true"
@@ -70,12 +71,12 @@
 
         <receiver android:name=".PartsUpdater" android:enabled="true">
             <intent-filter>
-                <action android:name="lineageos.intent.action.UPDATE_PREFERENCE" />
+                <action android:name="oneos.intent.action.UPDATE_PREFERENCE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
 
-        <provider android:name=".search.LineagePartsSearchIndexablesProvider"
+        <provider android:name=".search.onepartsSearchIndexablesProvider"
                   android:authorities="com.teamone.oneparts"
                   android:multiprocess="false"
                   android:grantUriPermissions="true"
