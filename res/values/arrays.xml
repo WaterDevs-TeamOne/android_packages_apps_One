@@ -75,4 +75,36 @@
         <item>3</item> <!-- Force dark -->
     </string-array>
 
+    <string-array name="dark_overlay_entries" translatable="false">
+        <item>@string/style_dark_overlay_default</item>
+        <item>@string/style_dark_overlay_black</item>
+    </string-array>
+
+    <!-- These should be updated accordingly to the sdk -->
+    <string-array name="dark_overlay_values" translatable="false">
+        <item>com.teamone.overlay.dark</item>
+        <item>org.teamone.overlay.black</item>
+    </string-array>
+
+    <!-- Sms limit -->
+    <string-array name="sms_security_check_limit_entries" translatable="false">
+        <item>@string/sms_security_check_limit_always_confirm</item>
+        <item>5</item>
+        <item>10</item>
+        <item>30</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+    </string-array>
+
+    <string-array name="sms_security_check_limit_values" translatable="false">
+        <item>0</item>
+        <item>5</item>
+        <item>10</item>
+        <item>30</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+    </string-array>
+
 </resources>
