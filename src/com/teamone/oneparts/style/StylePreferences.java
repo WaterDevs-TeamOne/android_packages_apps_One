@@ -51,7 +51,6 @@ import com.teamone.oneparts.style.util.UIUtils;
 import java.util.Arrays;
 import java.util.List;
 
-import oneos.preference.OneSystemSettingListPreference;
 import oneos.providers.oneSettings;
 import oneos.style.StyleInterface;
 import oneos.style.Suggestion;
@@ -64,6 +63,7 @@ public class StylePreferences extends SettingsPreferenceFragment {
 
     private Preference mStylePref;
     private Preference mAccentPref;
+    private Preference mDarkPref;
 
     private List<Accent> mAccents;
 
@@ -92,9 +92,9 @@ public class StylePreferences extends SettingsPreferenceFragment {
         mAccentPref.setOnPreferenceClickListener(this::onAccentClick);
         setupAccentPref();
 
-        LineageSystemSettingListPreference darkPref = (LineageSystemSettingListPreference)
-                findPreference("berry_dark_overlay");
-        darkPref.setOnPreferenceChangeListener(this::onDarkChange);
+        mDarkPref = findPreference("berry_dark_overlay");
+        mDarkPref.setOnPreferenceChangeListener(this::onDarkChange);
+        setDarkStyleEnabled(mInterface.getGlobalStyle());
 
         Preference automagic = findPreference("style_automagic");
         automagic.setOnPreferenceClickListener(p -> onAutomagicClick());
@@ -282,8 +282,14 @@ public class StylePreferences extends SettingsPreferenceFragment {
         // selection dialog to be dismissed gracefully
         new Handler().postDelayed(() -> mInterface.setGlobalStyle(value, mPackageName), 500);
 
-	setStyleIcon(value);
+        setDarkStyleEnabled(value);
+        setStyleIcon(value);
+
         return true;
+    }
+
+    private void setDarkStyleEnabled(int value) {
+        mDarkPref.setEnabled(value != StyleInterface.STYLE_GLOBAL_LIGHT);
     }
 
     private void setStyleIcon(int value) {
