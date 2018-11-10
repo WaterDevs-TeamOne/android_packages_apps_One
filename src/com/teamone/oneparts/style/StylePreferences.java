@@ -16,6 +16,8 @@
  */
 package com.teamone.oneparts.style;
 
+import static android.Manifest.permission.CHANGE_OVERLAY_PACKAGES;
+
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -48,9 +50,6 @@ import com.teamone.oneparts.style.util.AccentUtils;
 import com.teamone.oneparts.style.util.OverlayManager;
 import com.teamone.oneparts.style.util.UIUtils;
 
-import java.util.Arrays;
-import java.util.List;
-
 import oneos.providers.oneSettings;
 import oneos.style.StyleInterface;
 import oneos.style.Suggestion;
@@ -58,7 +57,8 @@ import oneos.style.Suggestion;
 public class StylePreferences extends SettingsPreferenceFragment {
     private static final String TAG = "StylePreferences";
     private static final String CHANGE_STYLE_PERMISSION =
-            oneos.platform.Manifest.permission.CHANGE_STYLE;
+            CHANGE_OVERLAY_PACKAGES;
+
     private static final int REQUEST_CHANGE_STYLE = 68;
 
     private Preference mStylePref;
