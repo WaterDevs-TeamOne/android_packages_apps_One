@@ -1,0 +1,14 @@
+# Keep all Fragments in this package, which are used by reflection.
+-keep class com.teamone.oneparts.*Fragment
+-keep class com.teamone.oneparts.*Picker
+-keep class com.teamone.oneparts.*Settings
+
+# Keep click responders
+-keepclassmembers class com.android.settings.inputmethod.UserDictionaryAddWordActivity {
+  *** onClick*(...);
+}
+
+-keep public class * extends androidx.preference.* {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+

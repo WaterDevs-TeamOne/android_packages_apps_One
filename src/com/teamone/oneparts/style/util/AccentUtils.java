@@ -20,15 +20,17 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.support.annotation.ColorInt;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Log;
 
 import com.teamone.oneparts.R;
 import com.teamone.oneparts.style.models.Accent;
 import com.teamone.oneparts.style.models.StyleStatus;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 
 import oneos.style.StyleInterface;
 

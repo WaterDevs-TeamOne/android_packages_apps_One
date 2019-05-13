@@ -31,14 +31,10 @@ import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.ColorInt;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.preference.Preference;
-import android.support.v7.graphics.Palette;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
+
 
 import com.teamone.oneparts.R;
 import com.teamone.oneparts.SettingsPreferenceFragment;
@@ -49,6 +45,13 @@ import com.teamone.oneparts.style.util.AccentAdapter;
 import com.teamone.oneparts.style.util.AccentUtils;
 import com.teamone.oneparts.style.util.OverlayManager;
 import com.teamone.oneparts.style.util.UIUtils;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.palette.graphics.Palette;
+import androidx.preference.Preference;
+
 
 import oneos.providers.oneSettings;
 import oneos.style.StyleInterface;

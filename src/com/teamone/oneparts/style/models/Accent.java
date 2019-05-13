@@ -16,8 +16,8 @@
  */
 package com.teamone.oneparts.style.models;
 
-import android.support.annotation.ColorInt;
-import android.support.annotation.NonNull;
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
 
 public class Accent {
     @NonNull

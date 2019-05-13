@@ -25,16 +25,25 @@ import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.provider.Settings;
+
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+
 import androidx.fragment.app.FragmentActivity;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
+=======
+import androidx.preference.PreferenceFragment;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
+
+import com.android.settingslib.drawer.SettingsDrawerActivity;
+>>>>>>> ed2482f... LineageParts: Migrate to androidx:src/org/lineageos/lineageparts/PartsActivity.java
 
 import com.teamone.oneparts.profiles.NFCProfileTagCallback;
 import com.teamone.oneparts.widget.SwitchBar;
