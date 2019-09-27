@@ -75,18 +75,4 @@
         <item>3</item> <!-- Force dark -->
     </string-array>
 
-    <!-- Supported accent packages -->
-    <string-array name="accent_packages" translatable="false">
-        <item>com.teamone.overlay.accent.red</item>
-        <item>com.teamone.overlay.accent.pink</item>
-        <item>com.teamone.overlay.accent.purple</item>
-        <item>com.teamone.overlay.accent.blue</item>
-        <item>com.teamone.overlay.accent.cyan</item>
-        <item>com.teamone.overlay.accent.green</item>
-        <item>com.teamone.overlay.accent.orange</item>
-        <item>com.teamone.overlay.accent.yellow</item>
-        <item>com.teamone.overlay.accent.brown</item>
-        <item>com.teamone.overlay.accent.black</item>
-    </string-array>
-
 </resources>
